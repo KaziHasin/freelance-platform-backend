@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
-    "build": "tsc",
+    "build": "tsc && mv src/dist dist || true",
     "start": "node -r tsconfig-paths/register dist/server.js",
     "run-cron": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/scripts/run-cron.ts"
   },
